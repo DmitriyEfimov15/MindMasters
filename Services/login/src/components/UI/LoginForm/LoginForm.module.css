@@ -1,0 +1,26 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.link__box {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    height: 20px;
+}
+
+.link{
+    text-decoration: none;
+    color: #666477;
+    position: absolute;
+    right: 5px;
+}
+
+.form button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}

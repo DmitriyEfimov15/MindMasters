@@ -1,0 +1,22 @@
+
+.input__box {
+    position: relative;
+}
+
+.input__box input {
+    width: 400px;
+    margin-top: 18px;
+}
+
+.input__box label {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.input__box label img{
+    width: 16px;
+}

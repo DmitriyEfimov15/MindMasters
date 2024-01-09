@@ -12,7 +12,11 @@ export function buildPlugins({mode, paths, platform}: BuildOptions): Configurati
     const isDev = mode === 'development'
 
     const plugins: Configuration['plugins'] = [
-        new HtmlWebpackPlugin({template: paths.html, favicon: path.resolve(paths.public, 'favicon.ico')}),
+        new HtmlWebpackPlugin({
+            template: paths.html,
+            favicon: path.resolve(paths.public, 'favicon.ico'),
+            publicPath: '/'
+        }),
         new webpack.DefinePlugin({
             __PLATFORM__: JSON.stringify(platform)
         }),
