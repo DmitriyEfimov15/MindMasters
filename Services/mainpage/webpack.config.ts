@@ -7,8 +7,7 @@ interface EnvVariables {
     mode?: BuildMode,
     port?: number,
     platform?: BuildPlatform,
-    LOGIN_REMOTE_URL: string
-    MAINPAGE_REMOTE_URL: string
+
 }
 
 export default (env: EnvVariables) => {
@@ -23,23 +22,17 @@ export default (env: EnvVariables) => {
 
     const config: webpack.Configuration = buildWebpack({
         mode: env.mode ?? 'development',
-        port: env.port ?? 3000,
+        port: env.port ?? 3002,
         paths,
         platform: env.platform ?? 'desktop'
     })
 
-    const LOGIN_REMOTE_URL = env.LOGIN_REMOTE_URL ?? 'http://localhost:3001'
-    const MAINPAGE_REMOTE_URL = env.MAINPAGE_REMOTE_URL ?? 'http://localhost:3002'
-
     config.plugins.push(new webpack.container.ModuleFederationPlugin({
-        name: 'host',
+        name: 'mainpage',
         filename: 'remoteEntry.js',
-
-        remotes: {
-            login: `login@${LOGIN_REMOTE_URL}/remoteEntry.js`,
-            mainpage: `mainpage@${MAINPAGE_REMOTE_URL}/remoteEntry.js`
+        exposes: {
+            './Router': './src/components/router/Router.tsx'
         },
-
         shared: {
             ...packageJson.dependencies,
             react: {

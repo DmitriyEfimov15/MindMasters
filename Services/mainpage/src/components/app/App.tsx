@@ -1,12 +1,12 @@
 import {FC} from 'react';
-import './global.css'
 import {Outlet} from "react-router-dom";
-
-const App: FC = () => {
+import {MainPage} from "@/components/pages/MainPage";
+const App:FC = () => {
     return (
-        <div className={'container'}>
+       <div>
+            <MainPage/>
             <Outlet/>
-        </div>
+       </div>
     );
 };
 

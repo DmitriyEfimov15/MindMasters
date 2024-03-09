@@ -1,7 +1,6 @@
 import {createRoot} from "react-dom/client";
 import {RouterProvider} from "react-router-dom";
 import {router} from "@/components/router/Router";
-import {ThemeProvider} from "@packages/shared/src/context/ThemeProvider";
 
 
 const root = document.getElementById('root')
@@ -13,8 +12,6 @@ if(!root) {
 const container = createRoot(root)
 
 container.render(
-    <ThemeProvider>
-        <RouterProvider router={router}/>
-    </ThemeProvider>
+    <RouterProvider router={router} />
 )
 

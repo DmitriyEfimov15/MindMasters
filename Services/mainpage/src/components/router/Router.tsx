@@ -1,15 +1,15 @@
-import {createBrowserRouter, Navigate} from "react-router-dom";
+    import {createBrowserRouter, Navigate} from "react-router-dom";
 import App from "@/components/app/App";
 
 const routes = [
     {
 
-        path: '/login',
+        path: '/home',
         element: <App />,
         children: [
             {
-                path: 'login/*',
-                element: <Navigate to={'/login'}/>
+                path: 'home/*',
+                element: <Navigate to={'/home'}/>
             }
         ]
     }
