@@ -1,12 +1,18 @@
-import {FC} from 'react';
+import {FC, useEffect, useState} from 'react';
 import './global.css'
 import {Outlet} from "react-router-dom";
+import {ThemeContext} from "@packages/shared/src/context/ThemeText";
 
 const App: FC = () => {
+
+    const [theme, setTheme] = useState(localStorage.getItem('theme'))
+
     return (
-        <div className={'container'}>
-            <Outlet/>
-        </div>
+        <ThemeContext.Provider value={{theme, setTheme}}>
+            <div className={'container'}>
+                <Outlet/>
+            </div>
+        </ThemeContext.Provider>
     );
 };
 

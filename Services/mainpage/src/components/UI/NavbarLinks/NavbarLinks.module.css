@@ -2,11 +2,12 @@
     font-weight: 700;
     text-decoration: none;
     color: #000;
-    font-size: 19px;
+    font-size: 14px;
     padding-right: 16px;
     transition: .2s;
+    height: 40px;
 }
 
 .container a:hover {
-    color: #ce2a28;  /*     ПОМЕНЯТЬ КОГДА ОПРЕДЛИМСЯ С ЦВЕТОМ ВСЕГО САЙТА    */
+    color: #008CF0;  /*     ПОМЕНЯТЬ КОГДА ОПРЕДЛИМСЯ С ЦВЕТОМ ВСЕГО САЙТА    */
 }

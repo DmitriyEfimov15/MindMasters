@@ -1,0 +1,54 @@
+#toggle{
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 80px;
+    background: #E5E4E2;
+    height: 36px;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sun, .moon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    z-index: 1;
+    width: 50%;
+}
+
+.sun svg, .moon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.container input:checked .container {
+    background: #008CF0;
+}
+
+.container::before {
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 0;
+    left: 4.5px;
+    transition: .3s;
+}
+
+/*.container:hover::before{*/
+/*    transform: translateX(38px);*/
+/*}*/
+
+.container:has(#toggle:checked)::before {
+    transform: translateX(38px);
+}

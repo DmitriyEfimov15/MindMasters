@@ -4,12 +4,12 @@ import App from "@/components/app/App";
 const routes = [
     {
 
-        path: '/home',
+        path: '/',
         element: <App />,
         children: [
             {
-                path: 'home/*',
-                element: <Navigate to={'/home'}/>
+                path: '/login',
+                element: <Navigate to={'/'}/>
             }
         ]
     }

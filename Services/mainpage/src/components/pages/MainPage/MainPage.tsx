@@ -4,7 +4,7 @@ const LoginPage = () => {
 
     return (
         <AppLayout navbarChildren={NavbarLinks}>
-            MAINPAGE
+            MAINPAGE    ДОДЕЛАТЬ TOGGLE!!!
         </AppLayout>
     );
 };

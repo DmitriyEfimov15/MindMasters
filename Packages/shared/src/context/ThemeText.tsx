@@ -1,7 +1,13 @@
 import {createContext} from 'react'
-export const themes = {
-    dark: 'dark',
-    light: 'light'
+export interface Themes {
+    theme: string,
+    setTheme:  React.Dispatch<React.SetStateAction<string>>
+
 }
 
-export const ThemeContext = createContext({})
+const initialState: Themes = {
+    theme: 'light',
+    setTheme: () => 'light'
+}
+
+export const ThemeContext = createContext(initialState)

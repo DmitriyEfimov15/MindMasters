@@ -3,17 +3,96 @@
     align-items: center;
     justify-content: space-between;
     height: 64px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 
-img {
-    width: 20px;
-    height: 20px;
-}
+/*img {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*}*/
 
-.header__left {
+.header__left, .header__right{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 40%;
     height: 100%;
+    padding: 0 15px;
 }
+
+.links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.header_logo img{
+    width: 180px;
+    /*height: 40px;*/
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.header__right {
+    width: 20%;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.settings svg{
+    width: 30px;
+    height: 30px;
+}
+
+.settings svg {
+    font-weight: bold;
+}
+
+.authorisation__img, .number__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number__img svg {
+    width: 40px;
+    height: 40px;
+}
+
+.number__img svg {
+    cursor: pointer;
+    transition: .2s;
+}
+
+.number__img svg:hover {
+    color: #008CF0;
+}
+
+.authorisation__img {
+    background: #008CF0;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: .3s;
+}
+
+.authorisation__img:hover {
+    background: #306ee7;
+}
+
