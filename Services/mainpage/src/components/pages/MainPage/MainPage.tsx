@@ -1,9 +1,14 @@
 import {AppLayout} from "@packages/shared";
-import {NavbarLinks} from "@/components/UI/NavbarLinks/NavbarLinks";
+import {
+    FooterLinks,
+    NavbarAuthorisation,
+    NavbarFullModalLinks,
+    NavbarLinks
+} from "@/components/UI/NavbarLinks/NavbarLinks";
 const LoginPage = () => {
 
     return (
-        <AppLayout navbarChildren={NavbarLinks}>
+        <AppLayout footerChildrenModal={FooterLinks} fullModalChildren={NavbarFullModalLinks} authorisationChildren={NavbarAuthorisation} navbarChildren={NavbarLinks}>
             MAINPAGE    ДОДЕЛАТЬ TOGGLE!!!
         </AppLayout>
     );

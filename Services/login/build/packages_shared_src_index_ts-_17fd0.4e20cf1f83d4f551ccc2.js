@@ -333,7 +333,7 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ "../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!../../packages/shared/src/UI/RedButton/RedButton.module.css":
 /*!*****************************************************************************************************************************************!*\
-  !*** ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!../../packages/shared/src/UI/RedButton/RedButton.module.css ***!
+  !*** ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!../../packages/shared/src/UI/BlueButton/BlueButton.module.css ***!
   \*****************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -364,7 +364,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.\\------packages-shared-src-UI-RedBut
 
 .\\------packages-shared-src-UI-RedButton-RedButton-module__button:hover {
     background: #da5c59;
-}`, "",{"version":3,"sources":["webpack://./../../packages/shared/src/UI/RedButton/RedButton.module.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,eAAe;IACf,eAAe;IACf,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,mBAAmB;AACvB","sourcesContent":[".button {\r\n    outline: none;\r\n    border: none;\r\n    background: #fe6b68;\r\n    color: #fff;\r\n    font-size: 20px;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    transition: .5s;\r\n}\r\n\r\n.button:hover {\r\n    background: #da5c59;\r\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./../../packages/shared/src/UI/BlueButton/BlueButton.module.css"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,YAAY;IACZ,mBAAmB;IACnB,WAAW;IACX,eAAe;IACf,eAAe;IACf,mBAAmB;IACnB,eAAe;AACnB;;AAEA;IACI,mBAAmB;AACvB","sourcesContent":[".button {\r\n    outline: none;\r\n    border: none;\r\n    background: #fe6b68;\r\n    color: #fff;\r\n    font-size: 20px;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    transition: .5s;\r\n}\r\n\r\n.button:hover {\r\n    background: #da5c59;\r\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"button": `------packages-shared-src-UI-RedButton-RedButton-module__button`
@@ -552,7 +552,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ "../../packages/shared/src/UI/RedButton/RedButton.module.css":
 /*!*******************************************************************!*\
-  !*** ../../packages/shared/src/UI/RedButton/RedButton.module.css ***!
+  !*** ../../packages/shared/src/UI/BlueButton/BlueButton.module.css ***!
   \*******************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -573,7 +573,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "../../node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_1_use_1_RedButton_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./RedButton.module.css */ "../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!../../packages/shared/src/UI/RedButton/RedButton.module.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_1_use_1_RedButton_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./BlueButton.module.css */ "../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!../../packages/shared/src/UI/RedButton/RedButton.module.css");
 
       
       
@@ -924,7 +924,7 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ "../../packages/shared/src/UI/RedButton/RedButton.tsx":
 /*!************************************************************!*\
-  !*** ../../packages/shared/src/UI/RedButton/RedButton.tsx ***!
+  !*** ../../packages/shared/src/UI/BlueButton/BlueButton.tsx ***!
   \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -934,7 +934,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   RedButton: () => (/* binding */ RedButton)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "../../node_modules/react/jsx-runtime.js");
-/* harmony import */ var _RedButton_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RedButton.module.css */ "../../packages/shared/src/UI/RedButton/RedButton.module.css");
+/* harmony import */ var _RedButton_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BlueButton.module.css */ "../../packages/shared/src/UI/RedButton/RedButton.module.css");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ../../node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "../../node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ../../node_modules/react-refresh/runtime.js */ "../../node_modules/react-refresh/runtime.js");
 
@@ -978,7 +978,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Input: () => (/* reexport safe */ _UI_Input_Input__WEBPACK_IMPORTED_MODULE_1__.Input),
 /* harmony export */   RedButton: () => (/* reexport safe */ _UI_RedButton_RedButton__WEBPACK_IMPORTED_MODULE_0__.RedButton)
 /* harmony export */ });
-/* harmony import */ var _UI_RedButton_RedButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UI/RedButton/RedButton */ "../../packages/shared/src/UI/RedButton/RedButton.tsx");
+/* harmony import */ var _UI_RedButton_RedButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UI/BlueButton/BlueButton */ "../../packages/shared/src/UI/RedButton/RedButton.tsx");
 /* harmony import */ var _UI_Input_Input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UI/Input/Input */ "../../packages/shared/src/UI/Input/Input.tsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ../../node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "../../node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ../../node_modules/react-refresh/runtime.js */ "../../node_modules/react-refresh/runtime.js");

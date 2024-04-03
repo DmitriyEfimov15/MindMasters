@@ -1,4 +1,4 @@
-.container a{
+.container a, .dark__container a{
     font-weight: 700;
     text-decoration: none;
     color: #000;
@@ -8,6 +8,108 @@
     height: 40px;
 }
 
+.dark__container a {
+    color: #FFFFFF99;
+}
+
 .container a:hover {
-    color: #008CF0;  /*     ПОМЕНЯТЬ КОГДА ОПРЕДЛИМСЯ С ЦВЕТОМ ВСЕГО САЙТА    */
+    color: #008CF0;
+}
+
+.authorisation__img, .authorisation__img a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authorisation__img {
+    background: #008CF0;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: .3s;
+}
+
+.authorisation__img a {
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.authorisation__img:hover {
+    background: #306ee7;
+}
+
+.link {
+    width: 100%;
+    background: white;
+    margin: 2px 0;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s;
+}
+
+.link div {
+    padding: 0 20px;
+}
+
+.link__authorisation {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+}
+
+.link__authorisation svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.link:hover {
+    background: #f1efef;
+}
+
+.telegram, .phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1efef;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.telegram:hover, .phone:hover {
+    background: #eceaea;
+}
+
+.telegram svg, .phone svg{
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    color: black;
+}
+
+.footer a {
+    margin: 0 15px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    max-width: 1000px;
+    justify-content: space-between;
 }

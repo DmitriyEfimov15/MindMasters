@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from "./LoginForm.module.css";
-import {RedButton} from "@packages/shared";
+import {BlueButton} from "@packages/shared";
 import InputBox from "@/components/UI/InputBox/InputBox";
 
 const LoginForm = () => {
@@ -15,7 +15,7 @@ const LoginForm = () => {
             <div className={classes.link__box}>
                 <a className={classes.link} href="">Восстановить пароль</a> {/*  Добавить форму востановления пароля!!!!!!!!  */}
             </div>
-            <RedButton onClick={buttonClick}>Войти</RedButton>
+            <BlueButton onClick={buttonClick}>Войти</BlueButton>
         </form>
     );
 };

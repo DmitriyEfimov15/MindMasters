@@ -1,62 +1,54 @@
-import {FC, ReactNode, useContext, useState} from 'react';
+import {FC, ReactNode, useContext, useState, useEffect} from 'react';
 import classes from "./Navbar.module.css"
 import Phone from "../../assets/phonesvg.svg"
-import Enter from '../../assets/entersvg.svg'
 import logo_light from '../../assets/logo_right_light.png'
 import logo_dark from '../../assets/logo_right_dark.png'
+import Lines from '../../assets/lines.svg'
 import Toggle from "../../UI/Toggle/Toggle";
 import {ThemeContext} from "../../context/ThemeText";
+import FullModal from "../../UI/FullModal/FullModal";
+import DesktopNavbar from "./DesktopNavbar/DesktopNavbar";
+import MobileNavbar from "./MobileNavbar/MobileNavbar";
 
 interface NavbarProps {
     children?: ReactNode;
+    authorisationChildren: ReactNode;
+    fullModalChildren: ReactNode;
+    footerChildren: ReactNode;
 }
-const Navbar: FC<NavbarProps> = ({children}) => {
-    const {theme, setTheme} = useContext(ThemeContext)
+const Navbar: FC<NavbarProps> = ({children, authorisationChildren, fullModalChildren, footerChildren}) => {
+    const {theme} = useContext(ThemeContext)
+    const lightTheme = theme === 'light'
+    const [userMedia, setUserMedia] = useState<boolean>(window.matchMedia("(max-width: 1024px)").matches)
+    const [width, setWidth] = useState(window.innerWidth);
+    const [isVisibleFullModal, setIsVisibleFullModal] = useState<boolean>(false)
 
-    const [inputChecked, setInputChecked] = useState(theme == 'light' ? false : true)
-    const toggleFun = () => {
-        if(localStorage.getItem('theme') === 'light') {
-            localStorage.setItem('theme', 'dark')
-            return setTheme('dark')
-        }
+    useEffect(() => {
+        const handleResize = (event: any) => {
+            setWidth(event.target.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
-        if(localStorage.getItem('theme') === 'dark') {
-            localStorage.setItem('theme', 'light')
-            return setTheme('light')
-        }
+
+    useEffect(() => {
+        setUserMedia(window.matchMedia("(max-width: 1024px)").matches)
+    }, [window.innerWidth]);
+
+    if (userMedia == false) {
+        return (
+            <DesktopNavbar theme={lightTheme} linkChildren={children} authorisationChildren={authorisationChildren}/>
+        );
     }
 
-    return (
-        <header className={classes.header}>
-            <div className={classes.header__left}>
-                <div className={classes.header_logo}>
-                    <img src={theme === 'light' ? logo_light : logo_dark} alt="ЗДЕСЬ ЛОГО"/>
-                </div>
-                <div className={classes.links}>
-                    {children}
-                </div>
-            </div>
-            <div className={classes.header__right}>
-                <div className={classes.settings}>
-                    <div className={classes.number}>
-                        <div className={classes.number__img}>
-                            <Phone />
-                        </div>
-                    </div>
-
-                    <div className={classes.mode__toggle}>
-                        <Toggle checked={inputChecked} fun={toggleFun}/>
-                    </div>
-
-                    <div className={classes.authorisation}>
-                        <div className={classes.authorisation__img}>
-                            <Enter />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-    );
+    if (userMedia== true) {
+        return (
+            <MobileNavbar theme={lightTheme} footerChildren={footerChildren} isVisible={isVisibleFullModal} setIsVisible={setIsVisibleFullModal} fullModalChildren={fullModalChildren}/>
+        );
+    }
 };
 
 export default Navbar;

@@ -77,19 +77,6 @@
     color: #008CF0;
 }
 
-.open__button__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.open__button__container svg {
-    color: #FFFFFF99;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
 /*DARK MODE*/
 
 .dark__header {
@@ -104,14 +91,17 @@
     color: #FFFFFF99;
 }
 
-.dark__header .number__img svg:hover, .header .open__button__container svg:hover, .dark__header .open__button__container svg:hover{
+.dark__header .number__img svg:hover{
     color: #008CF0;
     transition: .2s;
 }
 
-.header .open__button__container svg {
-    color: #000;
+.mode__toggle svg {
+    width: 20px;
+    height: 20px;
 }
+
+/*MEDIA*/
 
 @media (min-width: 1920px) {
     .header__container, .dark__header__container {
@@ -144,3 +134,4 @@
         height: 30px;
     }
 }
+

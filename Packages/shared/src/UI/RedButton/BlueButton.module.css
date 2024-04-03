@@ -1,7 +1,7 @@
 .button {
     outline: none;
     border: none;
-    background: #fe6b68;
+    background: #008CF0;
     color: #fff;
     font-size: 20px;
     cursor: pointer;
@@ -10,5 +10,5 @@
 }
 
 .button:hover {
-    background: #da5c59;
+    background: #306ee7;
 }

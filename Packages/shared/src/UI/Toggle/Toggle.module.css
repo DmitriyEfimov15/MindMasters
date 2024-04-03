@@ -2,7 +2,7 @@
     display: none;
 }
 
-.container {
+.container, .dark__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,13 +27,14 @@
 .sun svg, .moon svg {
     width: 20px;
     height: 20px;
+    color: rgb(154, 151, 151);
 }
 
 .container input:checked .container {
     background: #008CF0;
 }
 
-.container::before {
+.container::before, .dark__container::before {
     position: absolute;
     content: '';
     width: 32px;
@@ -45,10 +46,11 @@
     transition: .3s;
 }
 
-/*.container:hover::before{*/
-/*    transform: translateX(38px);*/
-/*}*/
-
-.container:has(#toggle:checked)::before {
+.container:has(#toggle:checked)::before, .dark__container:has(#toggle:checked)::before {
     transform: translateX(38px);
+}
+
+/*DARK MODE*/
+.dark__container {
+    background: #131313;
 }
