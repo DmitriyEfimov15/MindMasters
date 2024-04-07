@@ -5,10 +5,11 @@ import {
     NavbarFullModalLinks,
     NavbarLinks
 } from "@/components/UI/NavbarLinks/NavbarLinks";
+import {FooterImportantLinks, FooterInfoLinks} from "@/components/UI/footerLinks/FooterLinks";
 const LoginPage = () => {
 
     return (
-        <AppLayout footerChildrenModal={FooterLinks} fullModalChildren={NavbarFullModalLinks} authorisationChildren={NavbarAuthorisation} navbarChildren={NavbarLinks}>
+        <AppLayout footerInfoChildren={FooterInfoLinks} footerLinksChildren={FooterImportantLinks} footerChildrenModal={FooterLinks} fullModalChildren={NavbarFullModalLinks} authorisationChildren={NavbarAuthorisation} navbarChildren={NavbarLinks}>
             MAINPAGE    ДОДЕЛАТЬ TOGGLE!!!
         </AppLayout>
     );

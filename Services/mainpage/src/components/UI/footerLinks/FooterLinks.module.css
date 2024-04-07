@@ -1,0 +1,13 @@
+.container__links a, .container__info a{
+    text-decoration: underline;
+    color: #000000;
+    transition: 0.2s;
+}
+
+.container__links a:hover, .container__info a:hover {
+    color: #008CF0;
+}
+
+.container__info a{
+    color: #001b29;
+}

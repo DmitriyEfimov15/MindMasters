@@ -6,20 +6,21 @@ import Footer from "../Footer/Footer";
 interface AppLayoutProps {
     children: ReactNode,
     navbarChildren?: ReactNode,
-    footerChildren?: ReactNode,
+    footerLinksChildren?: ReactNode;
+    footerInfoChildren: ReactNode;
     authorisationChildren?: ReactNode
     fullModalChildren: ReactNode;
     footerChildrenModal: ReactNode;
 }
 
-export const AppLayout: FC<AppLayoutProps> = ({children, navbarChildren, footerChildren, authorisationChildren, fullModalChildren, footerChildrenModal}) => {
+export const AppLayout: FC<AppLayoutProps> = ({children, navbarChildren, footerLinksChildren, authorisationChildren, fullModalChildren, footerChildrenModal, footerInfoChildren}) => {
     return (
         <div className={classes.container}>
             <Navbar footerChildren={footerChildrenModal} fullModalChildren={fullModalChildren} authorisationChildren={authorisationChildren} children={navbarChildren}/>
             <main className={classes.children__content}>
                 {children}
             </main>
-            <Footer children={footerChildren}/>
+            <Footer infoChildren={footerInfoChildren} linksChildren={footerLinksChildren}/>
         </div>
     );
 };

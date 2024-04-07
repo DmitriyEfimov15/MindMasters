@@ -1,3 +1,96 @@
+.social__media, .logo, .information__left, .information__right {
+    padding: 0 15px;
+}
+
+.footer, .dark__footer {
+    z-index: -1;
+    padding: 40px 64px;
+}
+
+.container, .logo, .social__media, .telegram a, .information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social__media p {
+    opacity: 0.5;
+}
+
+.telegram {
+    padding: 6px;
+    background: #008CF0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+    margin-left: 5px;
+}
+
+.telegram:hover{
+   background: #306ee7;
+}
+
 .telegram img {
-    width: 20px;
+    width: 30px;
+}
+
+.logo img{
+    width: 180px;
+    padding: 0 15px 15px 0;
+}
+
+.logo a {
+    padding-right: 15px;
+}
+
+.information {
+    opacity: 0.5;
+}
+
+.information__right a {
+    padding-right: 10px;
+}
+
+/*DARK MODE*/
+
+.dark__footer {
+    background: #313131;
+    color: #FFFFFF99;
+}
+
+.dark__footer .links a, .dark__footer .information__right a{
+    color: #FFFFFF99;
+}
+
+/*MEDIA*/
+
+@media (min-width: 1920px) {
+    .footer, .dark__footer {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer, .dark__footer, .container, .logo, .social__media{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px 0;
+    }
+
+    .information div {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .information {
+        font-size: 12px;
+    }
 }

@@ -1,24 +1,31 @@
-import {FC, ReactNode} from 'react';
+import {FC, ReactNode, useContext} from 'react';
 import classes from './Footer.module.css'
 import telegram from '../../assets/telegram.png'
+import {ThemeContext} from "../../context/ThemeText";
+import lightLogo from "../../assets/logo_right_light.png"
+import darkLogo from "../../assets/logo_right_dark.png"
 
 interface FooterProps {
-    children?: ReactNode
+    linksChildren: ReactNode;
+    infoChildren: ReactNode;
 }
-const Footer: FC<FooterProps> = ({children}) => {
+const Footer: FC<FooterProps> = ({linksChildren, infoChildren}) => {
+    const {theme} = useContext(ThemeContext)
+    const lightTheme = theme === 'light'
+
     return (
-        <footer className={classes.footer}>
+        <footer className={lightTheme ? classes.footer : classes.dark__footer}>
             <div className={classes.container}>
                 <div className={classes.logo}>
-                    <img src="" alt="ЛОГО"/>
-                </div>
-                <div className={classes.links}>
-                    {children}
+                    <img src={lightTheme ? lightLogo : darkLogo} alt="logo"/>
+                    <div className={classes.links}>
+                        {linksChildren}
+                    </div>
                 </div>
                 <div className={classes.social__media}>
                     <p>Мы в социальных сетях:</p>
                     <div className={classes.telegram}>
-                        <img src={telegram} alt="TELEGRAM"/>
+                        <a href="https://t.me/DimaChatChips"><img src={telegram} alt="TELEGRAM"/></a>
                     </div>
                 </div>
             </div>
@@ -28,9 +35,7 @@ const Footer: FC<FooterProps> = ({children}) => {
                 </div>
 
                 <div className={classes.information__right}>
-                    <p>Политика конфиденциальности</p>
-                    <p>Партнерам</p>
-                    <p>Техническая поддержка</p>
+                    {infoChildren}
                 </div>
             </div>
         </footer>
