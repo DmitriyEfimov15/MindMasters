@@ -3,7 +3,7 @@ import App from "@/components/app/App";
 // @ts-ignore
 import loginRoutes from 'login/Router'
 // @ts-ignore
-import mainpageRoutes from 'mainpage/Router'
+import mainpageRoutes from "mainpage/Router"
 
 const routes = [
     {
