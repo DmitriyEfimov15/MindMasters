@@ -24,3 +24,33 @@
     height: 50px;
     margin-top: 20px;
 }
+
+@media (max-width: 1200px) {
+    #form input {
+        width: 320px;
+    }
+}
+
+@media (max-width: 730px) {
+    #form input {
+        width: 250px;
+    }
+}
+
+@media (max-width: 630px) {
+    .link__box a{
+        font-size: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 350px) {
+    #form input {
+        width: 220px;
+    }
+
+    .link__box a{
+        font-size: 11px;
+    }
+}

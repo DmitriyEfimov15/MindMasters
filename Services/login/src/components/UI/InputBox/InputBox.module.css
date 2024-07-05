@@ -6,6 +6,11 @@
 .input__box input {
     width: 400px;
     margin-top: 18px;
+    padding: 20px 40px 20px 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    user-select: text;
+
 }
 
 .input__box label {

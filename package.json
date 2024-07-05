@@ -4,5 +4,8 @@
   "workspaces": [
     "packages/*",
     "services/*"
-  ]
+  ],
+  "dependencies": {
+    "mainpage": "^1.0.0"
+  }
 }

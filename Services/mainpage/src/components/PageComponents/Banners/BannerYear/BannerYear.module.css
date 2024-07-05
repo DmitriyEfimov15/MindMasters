@@ -1,0 +1,77 @@
+.banner__content__year, .dark__banner__content__year {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.banner__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.banner__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.text__information {
+    position: absolute;
+    padding: 220px 0 0 64px;
+    z-index: 99999;
+}
+
+.text__information h3 {
+    font-size: 70px;
+    color: #008CF0;
+}
+
+.dark__banner__content__year .text__information p{
+    color: #fff;
+}
+
+.paragraph__container, .context__container {
+    margin-bottom: 12px;
+}
+
+.paragraph__container p{
+    font-size: 32px;
+}
+
+.context__container p {
+    font-size: 13px;
+}
+
+.banner__buttons {
+    margin-top: 30px;
+}
+
+.banner__buttons button {
+    margin-right: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/*MEDIA*/
+
+@media (max-width: 1200px) {
+    .text__information h3 {
+        font-size: 58px;
+    }
+
+    .paragraph__container p{
+        font-size: 25px;
+    }
+
+    .context__container p {
+        font-size: 13px;
+    }
+
+    .banner__buttons button {
+        font-size: 13px;
+    }
+}

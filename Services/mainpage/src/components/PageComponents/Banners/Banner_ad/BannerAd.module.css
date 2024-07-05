@@ -1,0 +1,16 @@
+.banner_container, .dark__banner__container {
+    position: relative;
+    margin: 0 auto;
+    height: 715px;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    z-index: 1;
+}

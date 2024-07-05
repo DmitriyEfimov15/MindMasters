@@ -16,8 +16,7 @@ const InputBox = () => {
                        htmlFor="login-password-input">
                     <img src={hideImg} alt=""/>
                 </label>
-                <Input id={'login-password-input'} type={isPasswordVisible ? 'text' : 'password'}
-                       placeholder={'Пароль'}/>
+                <Input id={'login-password-input'} type={isPasswordVisible ? 'text' : 'password'} placeholder={'Пароль'}/>
             </div>
         </div>
     );

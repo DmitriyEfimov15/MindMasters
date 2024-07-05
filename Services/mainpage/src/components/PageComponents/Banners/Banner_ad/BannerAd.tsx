@@ -1,33 +1,83 @@
-import {FC} from 'react';
-import classes from "./Banner_ad.module.css"
-import BannerYear from "../../../../../../../Packages/shared/src/assets/banner_ad.png"
-// import BannerYear from "@/packages/shared/src/assets/banner_ad.png"
+import {FC, ReactNode, useContext, useEffect, useState} from 'react';
+import classes from "./BannerAd.module.css"
+import BannerYear from "@/components/PageComponents/Banners/BannerYear/BannerYear";
+import BannerIntensive from "@/components/PageComponents/Banners/BannerIntensive/BannerIntensive";
+import {ThemeContext} from "@packages/shared";
+import {Banner} from "@/types/banner";
+import DesktopBanner from "@/components/PageComponents/Banners/DesktopBanner/DesktopBanner";
+import MobileBanner from "@/components/PageComponents/Banners/MobileBanner/MobileBanner";
 
 const BannerAd: FC = () => {
-    return (
-        <div className={classes.banner_container}>
-            <div className={classes.carusel}>
-            {/*  Будущая карусель будет располагаться здесь  */}
-            </div>
+    const bannerKeys: Banner = {
+        year: <BannerYear/>,
+        intensive: <BannerIntensive/>
+    }
 
-            <div className={classes.banner__content__year}>
-                <div className={classes.text__information}>
-                    <h3>Годовой курс</h3>
-                    <div className={classes.paragraph__container}>
-                        <p>Старт продаж годовых курсов</p>
-                        <p>ЕГЭ, ОГЭ и 10КЛ 24/25 учебный год</p>
-                    </div>
-                    <div className={classes.context__container}>
-                        <p>Не жди начала учебного года!</p>
-                        <p>Позаботься о своей готовности к экзаменам уже сейчас!</p>
-                    </div>
+    const {theme} = useContext(ThemeContext)
+    const lightTheme = theme === 'light'
+
+    const [currentElement, setCurrentElement] = useState<ReactNode>(bannerKeys.year)
+    const [isButtonYearActive, setIsButtonYearActive] = useState<boolean>(true)
+    const [isButtonIntensiveActive, setIsButtonIntensiveActive] = useState<boolean>(false)
+    const [width, setWidth] = useState(window.innerWidth);
+
+    const [userMedia, setUserMedia] = useState<boolean>(window.matchMedia("(max-width: 1024px)").matches)
+
+
+    useEffect(() => {
+        const handleResize = (event: any) => {
+            setWidth(event.target.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        setUserMedia(window.matchMedia("(max-width: 1024px)").matches)
+    }, [window.innerWidth]);
+
+
+    const yearButtonFunc = (element: ReactNode) => {
+        setCurrentElement(bannerKeys.year)
+        setIsButtonYearActive(true)
+        setIsButtonIntensiveActive(false)
+    }
+
+    const intensiveButtonFunc = (element: ReactNode) => {
+        setCurrentElement(bannerKeys.intensive)
+        setIsButtonYearActive(false)
+        setIsButtonIntensiveActive(true)
+    }
+
+    if(!userMedia) {
+        return (
+            <div className={lightTheme ? classes.banner_container : classes.dark__banner__container}>
+                <div className={classes.carousel}>
+                    {/*  Будущая карусель будет располагаться здесь  */}
                 </div>
-                <picture>
-                    <img src={BannerYear} alt="Баннер годового курса"/>
-                </picture>
+                <DesktopBanner currentElement={currentElement}
+                               isButtonYearActive={isButtonYearActive}
+                               isButtonIntensiveActive={isButtonIntensiveActive}
+                               bannerKeys={bannerKeys}
+                               yearButtonFunc={yearButtonFunc}
+                               intensiveButtonFunc={intensiveButtonFunc}
+                />
             </div>
-        </div>
-    );
+        );
+    }
+
+    if(userMedia) {
+        return (
+            <div className={lightTheme ? classes.banner_container : classes.dark__banner__container}>
+                <div className={classes.carousel}>
+                    {/*  Будущая карусель будет располагаться здесь  */}
+                </div>
+                <MobileBanner/>
+            </div>
+        );
+    }
 };
 
 export default BannerAd;

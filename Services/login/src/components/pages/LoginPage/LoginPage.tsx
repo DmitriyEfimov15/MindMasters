@@ -3,7 +3,6 @@ import classes from './LoginPage.module.css'
 import LoginForm from "@/components/UI/LoginForm/LoginForm";
 
 const LoginPage = () => {
-
     return (
         <div className={classes.container}>
             <div className={classes.login__box}>
@@ -20,7 +19,7 @@ const LoginPage = () => {
                             <p>Мы скучали!</p>
                         </header>
 
-                       <LoginForm />
+                        <LoginForm />
                     </div>
                 </div>
             </div>

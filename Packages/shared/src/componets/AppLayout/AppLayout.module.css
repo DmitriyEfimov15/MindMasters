@@ -1,13 +1,18 @@
-.container {
+.container, .dark__container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-main {
-    flex: 1;
+.dark__container {
+    background: #313131;
 }
 
+
 .children__content {
+    flex: 1;
+    margin: 0 auto;
     background: #e0e1ea;
+    width: 100%;
+    max-width: 1920px;
 }

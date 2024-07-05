@@ -9,7 +9,7 @@ const LoginForm = () => {
         console.log('click')
     }
     return (
-        <form className={classes.form}>
+        <form className={classes.form} id={classes.form}>
             <InputBox />
             {/* Вопросики по поводу прикрепления link к правому краю!!!!*/}
             <div className={classes.link__box}>
