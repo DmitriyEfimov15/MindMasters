@@ -17,7 +17,12 @@ const FullModal: FC<FullModalProps> = ({isVisible, children, closeFun, footerChi
     const rootClasses = [classes.container]
 
     if(isVisible) {
+        document.body.style.overflowY = 'hidden'
         rootClasses.push(classes.active)
+    }
+
+    if (!isVisible) {
+        document.body.style.overflowY = 'auto'
     }
     return (
         <div className={rootClasses.join(' ')}>

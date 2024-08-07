@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.number {
+    font-size: 52px;
+    color: #008cf0;
+    font-weight: bold;
+}
+
+.text__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__dark .information {
+    color: #fff;
+}

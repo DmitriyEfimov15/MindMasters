@@ -2,19 +2,18 @@ import {FC, ReactNode, useContext} from 'react';
 import classes from './DesktopBanner.module.css'
 import BannerButton from "@/components/UI/BannerButton/BannerButton";
 import {objectLen} from "@/utils/objectLen";
-import {Banner} from "@/types/banner";
+import {bannerKeys} from "@/utils/bannerKeys";
 import {ThemeContext} from "@packages/shared";
 
 interface DesktopBannerProps {
     currentElement: ReactNode,
     isButtonYearActive: boolean,
     isButtonIntensiveActive: boolean,
-    bannerKeys: Banner,
     yearButtonFunc: (arg: ReactNode) => void,
     intensiveButtonFunc: (arg: ReactNode) => void,
  }
 
-const DesktopBanner: FC<DesktopBannerProps> = ({currentElement, bannerKeys, isButtonIntensiveActive, isButtonYearActive, yearButtonFunc, intensiveButtonFunc }) => {
+const DesktopBanner: FC<DesktopBannerProps> = ({currentElement, isButtonIntensiveActive, isButtonYearActive, yearButtonFunc, intensiveButtonFunc }) => {
     const {theme} = useContext(ThemeContext)
     const lightTheme = theme === 'light'
 

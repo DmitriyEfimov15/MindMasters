@@ -1,0 +1,23 @@
+.button, .dark__button {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.dark__button {
+    background-color: #e0e1ea;
+}
+
+.button:hover, .active {
+    background-color: #000;
+    color: #fff;
+}
+
+.dark__button:hover, .active__dark{
+    background-color: #1d1c1c;
+    color: #e0e1ea;
+}

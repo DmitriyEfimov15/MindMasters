@@ -1,0 +1,13 @@
+.container {
+    outline: none;
+    border: none;
+    background: #000;
+    cursor: pointer;
+    transition: .2s;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.container:hover {
+    opacity: 0.5;
+}

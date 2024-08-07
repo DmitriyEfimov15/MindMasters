@@ -4,7 +4,7 @@
     min-height: 100vh;
 }
 
-.dark__container {
+.dark__container, .dark__container .children__content {
     background: #313131;
 }
 

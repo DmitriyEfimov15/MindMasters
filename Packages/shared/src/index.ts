@@ -4,3 +4,4 @@ export {AppLayout} from "./componets/AppLayout/AppLayout"
 export {BlackButton} from "./UI/BlackButton/BlackButton"
 export {TransparentButton} from "./UI/TransparentButton/TransparentButton"
 export {ThemeContext} from './context/ThemeText'
+export {UserMediaWidth} from './componets/UserMediaWidth/UserMediaWidth'

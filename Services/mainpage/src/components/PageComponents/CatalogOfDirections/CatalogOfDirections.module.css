@@ -1,0 +1,103 @@
+.container, .container__dark {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h2, .container__dark h2{
+    margin-top: 52px;
+}
+
+.content__container {
+    width: 80%;
+    margin-top: 52px;
+}
+
+.content__blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-rows: repeat(2, 180px);
+}
+
+.consultation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.consultation p {
+    color: #000;
+}
+
+.svg__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg {
+    width: 30px;
+    height: 30px;
+    color: #000;
+}
+
+.consultation:hover {
+    background-color: #008Cf0;
+    color: #fff;
+}
+
+.consultation:hover .svg, .consultation:hover p  {
+    color: #fff;
+}
+
+.statistic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.statistic h2 {
+    text-align: center;
+}
+
+.toggle__contanier {
+    margin-top: 20px;
+}
+
+.toggle__contanier button {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.current_element {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* DARK MODE */
+
+.container__dark .consultation {
+    background-color: #008Cf0;
+}
+
+.container__dark .consultation p, .container__dark .svg, .container__dark h2 {
+    color: #fff;
+}
+
+.container__dark .consultation:hover {
+    background-color: #006eff;
+}
